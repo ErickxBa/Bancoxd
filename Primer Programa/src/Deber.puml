@@ -1,0 +1,27 @@
+@startuml
+
+class Mesa{
+    -altura: Double
+    -ancho: Double
+    -color: Color
+    -cosa: Cosa
+    +poner(cosa:Cosa)
+    +quitar(cosa:Cosa)
+}
+ Mesa <|-- MesadeMadera:Material
+ Mesa <|-- MesadeVidrio:Material
+
+class Pata{
+    -altura: double
+    -material: String
+}
+
+class Cauchito{
+    -estado: Estado
+}
+
+Mesa -> Pata
+
+Pata -> Cauchito
+
+@enduml
